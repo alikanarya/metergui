@@ -14,7 +14,15 @@ class MainWindow : public QMainWindow
 
 public:
 
-    QString path = "";
+    QImage imageFile;
+
+    //QString path = "";
+    QString loadedFileName = "";
+    QString loadedFileNamewPath = "";
+    QDir fileOpenDir;
+    QStringList filesInDirList;
+    QStringList fileFilters  = (QStringList() << "*.jpeg" << "*.jpg" << "*.png");
+    int filesInDirListIndex = 0;
 
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
