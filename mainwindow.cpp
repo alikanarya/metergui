@@ -26,7 +26,7 @@ void MainWindow::on_loadButton_clicked()
         fileOpenDir = QFileInfo(loadedFileNamewPath).absoluteDir();
         filesInDirList = fileOpenDir.entryList(fileFilters, QDir::Files);
 
-        foreach(QString temp, filesInDirList){ qDebug() << temp; }
+        //foreach(QString temp, filesInDirList){ qDebug() << temp; }
 
         loadedFileName = QFileInfo(loadedFileNamewPath).fileName();
         filesInDirListIndex = filesInDirList.indexOf(loadedFileName,0);
@@ -40,4 +40,28 @@ void MainWindow::on_loadButton_clicked()
     }
 
 
+}
+
+void MainWindow::on_nextImage_clicked()
+{
+    if(filesInDirListIndex != (filesInDirList.size()- 1)){
+        filesInDirListIndex++;
+
+        loadedFileName = filesInDirList.at(filesInDirListIndex);
+        //ui->labelPicNo->setText(QString::number(w->filesInDirListIndex)+": "+ w->loadedFileName);
+        imageFile.load(fileOpenDir.path() + "/" + loadedFileName);
+        ui->labelPicture->setPixmap( QPixmap::fromImage( imageFile ).scaled( imageFile.width(), imageFile.height(), Qt::KeepAspectRatio));
+    }
+}
+
+void MainWindow::on_prevImage_clicked()
+{
+    if(filesInDirListIndex != 0){
+        filesInDirListIndex--;
+
+        loadedFileName = filesInDirList.at(filesInDirListIndex);
+        //ui->labelPicNo->setText(QString::number(w->filesInDirListIndex)+": "+ w->loadedFileName);
+        imageFile.load(fileOpenDir.path() + "/" + loadedFileName);
+        ui->labelPicture->setPixmap( QPixmap::fromImage( imageFile ).scaled( imageFile.width(), imageFile.height(), Qt::KeepAspectRatio));
+    }
 }

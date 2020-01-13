@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.7.0
+** Created by: Qt User Interface Compiler version 5.13.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -10,10 +10,7 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
-#include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QButtonGroup>
-#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
@@ -37,39 +34,39 @@ public:
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
-            MainWindow->setObjectName(QStringLiteral("MainWindow"));
+            MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->resize(800, 600);
         centralwidget = new QWidget(MainWindow);
-        centralwidget->setObjectName(QStringLiteral("centralwidget"));
+        centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         labelPicture = new QLabel(centralwidget);
-        labelPicture->setObjectName(QStringLiteral("labelPicture"));
-        labelPicture->setGeometry(QRect(380, 30, 400, 300));
+        labelPicture->setObjectName(QString::fromUtf8("labelPicture"));
+        labelPicture->setGeometry(QRect(380, 50, 400, 300));
         labelPicture->setFrameShape(QFrame::Box);
         labelPicture->setScaledContents(true);
         loadButton = new QPushButton(centralwidget);
-        loadButton->setObjectName(QStringLiteral("loadButton"));
+        loadButton->setObjectName(QString::fromUtf8("loadButton"));
         loadButton->setGeometry(QRect(20, 20, 101, 25));
         QFont font;
         font.setBold(true);
         font.setWeight(75);
         loadButton->setFont(font);
         nextImage = new QPushButton(centralwidget);
-        nextImage->setObjectName(QStringLiteral("nextImage"));
-        nextImage->setEnabled(false);
-        nextImage->setGeometry(QRect(310, 170, 25, 25));
+        nextImage->setObjectName(QString::fromUtf8("nextImage"));
+        nextImage->setEnabled(true);
+        nextImage->setGeometry(QRect(410, 10, 25, 25));
         nextImage->setFont(font);
         prevImage = new QPushButton(centralwidget);
-        prevImage->setObjectName(QStringLiteral("prevImage"));
-        prevImage->setEnabled(false);
-        prevImage->setGeometry(QRect(280, 170, 25, 25));
+        prevImage->setObjectName(QString::fromUtf8("prevImage"));
+        prevImage->setEnabled(true);
+        prevImage->setGeometry(QRect(380, 10, 25, 25));
         prevImage->setFont(font);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
-        menubar->setObjectName(QStringLiteral("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 21));
+        menubar->setObjectName(QString::fromUtf8("menubar"));
+        menubar->setGeometry(QRect(0, 0, 800, 26));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
-        statusbar->setObjectName(QStringLiteral("statusbar"));
+        statusbar->setObjectName(QString::fromUtf8("statusbar"));
         MainWindow->setStatusBar(statusbar);
 
         retranslateUi(MainWindow);
@@ -79,11 +76,11 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         labelPicture->setText(QString());
-        loadButton->setText(QApplication::translate("MainWindow", "Klas\303\266r Se\303\247", 0));
-        nextImage->setText(QApplication::translate("MainWindow", "+", 0));
-        prevImage->setText(QApplication::translate("MainWindow", "-", 0));
+        loadButton->setText(QCoreApplication::translate("MainWindow", "Klas\303\266r Se\303\247", nullptr));
+        nextImage->setText(QCoreApplication::translate("MainWindow", "+", nullptr));
+        prevImage->setText(QCoreApplication::translate("MainWindow", "-", nullptr));
     } // retranslateUi
 
 };

@@ -30,6 +30,10 @@ public:
 private slots:
     void on_loadButton_clicked();
 
+    void on_nextImage_clicked();
+
+    void on_prevImage_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

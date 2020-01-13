@@ -18,7 +18,7 @@
     <property name="geometry">
      <rect>
       <x>380</x>
-      <y>30</y>
+      <y>50</y>
       <width>400</width>
       <height>300</height>
      </rect>
@@ -54,12 +54,12 @@
    </widget>
    <widget class="QPushButton" name="nextImage">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
-      <x>310</x>
-      <y>170</y>
+      <x>410</x>
+      <y>10</y>
       <width>25</width>
       <height>25</height>
      </rect>
@@ -76,12 +76,12 @@
    </widget>
    <widget class="QPushButton" name="prevImage">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>170</y>
+      <x>380</x>
+      <y>10</y>
       <width>25</width>
       <height>25</height>
      </rect>
@@ -103,7 +103,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
